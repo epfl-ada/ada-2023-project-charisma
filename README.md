@@ -21,7 +21,7 @@ PART 1: Understanding the Interlinkages between Music and Culture:
     - Movies Metadata Dataset (from CMU Movie Summary Corpus):
        - We eliminated all the duplicates of movie records from the dataset identified using all the attributes corresponding to the movies.
        - We checked for missing values in the dataset and found out that a lot of values of `Movie_Release_Date`, `Movie_Box_Office_Revenue` and `Movie_Runtime` were missing. (We plan to fill up some of these using the MovieLens MetaData Dataset.)
-       - We found out a strong correlation between Movie_Box_Office_Revenue and Movie_Release_Year and adjusted the revenues for inflation using the USD CPI Dataset to remove this correlation (Useful for PART 3)
+       - We found out a strong correlation between `Movie_Box_Office_Revenue` and `Movie_Release_Year` and adjusted the revenues for inflation using the USD CPI Dataset to remove this correlation (Useful for PART 3)
        - We identified the top 10 `Movie_Genres`, `Movie_Countries` and `Movie_Languages` (by the number of movies), used pie charts for understanding the movie count breakup amongst them and visualized and analysed the `Movie_Box_Office_Revenue` and `Movie_Runtime` using boxplots and lineplots (w.r.t. `Movie_Release_Year`) (Useful for PART 3)
     - Spotify Dataset:
        - We averaged and took the maximum of the relevant audio features of tracks across the movie albums individually so as to obtain a movie wise music attribute mix.
