@@ -1,3 +1,3 @@
-MAIN_DATA_PATH = r"" #Path to your Data Folder
+MAIN_DATA_PATH = r"/Users/romain/MovieSummaries" #Path to your Data Folder
 SPOTIPY_CLIENT_ID = ""#Your SPOTIPY_CLIENT_ID
 SPOTIPY_CLIENT_SECRET = ""#Your SPOTIPY_CLIENT_SECRET
