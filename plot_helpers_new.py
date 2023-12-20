@@ -102,8 +102,6 @@ def violin(data, x, y, labels=None, title="Violin Plot", xlabel="Categories", yl
         plt.ylim(ylim)
     plt.show()
 
-
-
 def line(data, x, y, hue=None, title="Line Plot with Error Bars", xlabel="X-axis", ylabel="Y-axis", remove_outliers=False,threshold = 3, xlim=None, ylim=None):
     """
     Create a line plot with error bars.
