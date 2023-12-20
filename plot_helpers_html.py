@@ -6,8 +6,8 @@ import plotly.express as px
 from slugify import slugify
 import pandas as pd
 import os
-import mplcursors
-import mpld3
+#import mplcursors
+#import mpld3
 
 def scatter(data, x, y, hue=None, title="Scatter Plot", xlabel="X-axis", ylabel="Y-axis", xlim=None, ylim=None, remove_outliers=False, threshold=3, filename=None):
     """
@@ -86,7 +86,7 @@ def box(data, x, y, labels=None, title="Box Plot", xlabel="Categories", ylabel="
         xaxis_title=xlabel,
         yaxis_title=ylabel,
         title_text=title,
-        xaxis=dict(tickangle=90)
+        xaxis=dict(tickangle=20)
     )
 
     if ylim:
