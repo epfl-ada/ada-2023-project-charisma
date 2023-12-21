@@ -30,13 +30,12 @@ def propensity_matching(paired_matching_original,MAIN_DATA_PATH,treatment,MATCH=
     #standardisation of independant variables before applying logit regression.
     paired_matching=paired_matching_original.copy().reset_index()
     paired_matching["Movie_Runtime"]=(paired_matching["Movie_Runtime"]-paired_matching["Movie_Runtime"].mean())/paired_matching["Movie_Runtime"].std()
-    paired_matching["Movie_Release_Year"]=(paired_matching["Movie_Release_Year"]-paired_matching["Movie_Release_Year"].mean())/paired_matching["Movie_Release_Year"].std()
     paired_matching["num_movies_languages"]=(paired_matching["num_movies_languages"]-paired_matching["num_movies_languages"].mean())/paired_matching["num_movies_languages"].std()
     paired_matching["num_movies_countries"]=(paired_matching["num_movies_countries"]-paired_matching["num_movies_countries"].mean())/paired_matching["num_movies_countries"].std()
     
     
     # logit regression for the music feature
-    formula = treatment + " ~  Movie_Runtime + num_movies_languages + num_movies_countries + Movie_Release_Year"
+    formula = treatment + " ~  Movie_Runtime + num_movies_languages + num_movies_countries"
     
     mod = smf.logit(formula=formula, data=paired_matching)
     
