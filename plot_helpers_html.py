@@ -6,10 +6,10 @@ import plotly.express as px
 from slugify import slugify
 import pandas as pd
 import os
-#import mplcursors
-#import mpld3
+import mplcursors
+import mpld3
 
-def scatter(data, x, y, hue=None, title="Scatter Plot", xlabel="X-axis", ylabel="Y-axis", xlim=None, ylim=None, remove_outliers=False, threshold=3, filename=None):
+def scatter_html(data, x, y, hue=None, title="Scatter Plot", xlabel="X-axis", ylabel="Y-axis", xlim=None, ylim=None, remove_outliers=False, threshold=3, filename=None):
     """
     Create a scatter plot using Plotly Express.
 
@@ -59,10 +59,10 @@ def scatter(data, x, y, hue=None, title="Scatter Plot", xlabel="X-axis", ylabel=
     # Save the plot as an HTML file
     fig.write_html(full_filename)
 
-    fig.show()
+    #fig.show()
 
 
-def box(data, x, y, labels=None, title="Box Plot", xlabel="Categories", ylabel="Values", ylim=None, log=False, filename=None):
+def box_html(data, x, y, labels=None, title="Box Plot", xlabel="Categories", ylabel="Values", ylim=None, log=False, filename=None):
     """
     Create a box plot using Plotly Express.
 
@@ -105,10 +105,10 @@ def box(data, x, y, labels=None, title="Box Plot", xlabel="Categories", ylabel="
     # Save the plot as an HTML file
     fig.write_html(full_filename)
 
-    fig.show()
+    #fig.show()
 
 
-def violin(data, x, y, labels=None, title="Violin Plot", xlabel="Categories", ylabel="Values", ylim=None, log=False, filename=None):
+def violin_html(data, x, y, labels=None, title="Violin Plot", xlabel="Categories", ylabel="Values", ylim=None, log=False, filename=None):
     """
     Create a violin plot using Plotly Express.
 
@@ -151,10 +151,10 @@ def violin(data, x, y, labels=None, title="Violin Plot", xlabel="Categories", yl
     # Save the plot as an HTML file
     fig.write_html(full_filename)
 
-    fig.show()
+    #fig.show()
 
 
-def line(data, x, y, hue=None, title="Line Plot with Error Bars", xlabel="X-axis", ylabel="Y-axis", remove_outliers=False, threshold=3, xlim=None, ylim=None, filename=None):
+def line_html(data, x, y, hue=None, title="Line Plot with Error Bars", xlabel="X-axis", ylabel="Y-axis", remove_outliers=False, threshold=3, xlim=None, ylim=None, filename=None):
     """
     Create a line plot with error bars.
 
@@ -210,7 +210,7 @@ def line(data, x, y, hue=None, title="Line Plot with Error Bars", xlabel="X-axis
     return ax
 
 
-def histogram(x, data=None, bins='auto', xscale='linear', yscale='linear', title="Histogram",
+def histogram_html(x, data=None, bins='auto', xscale='linear', yscale='linear', title="Histogram",
               xlabel="Values", ylabel="Frequency", xlim=None, ylim=None, remove_outliers=False, threshold=3, filename=None):
     """
     Create a histogram using Plotly Express.
@@ -269,10 +269,10 @@ def histogram(x, data=None, bins='auto', xscale='linear', yscale='linear', title
     # Save the plot as an HTML file
     fig.write_html(full_filename)
 
-    fig.show()
+    #fig.show()
 
 
-def pie_chart(data, labels, title="Pie Chart", filename=None):
+def pie_chart_html(data, labels, title="Pie Chart", filename=None):
     """
     Create a pie chart using Plotly Express.
 
@@ -297,9 +297,9 @@ def pie_chart(data, labels, title="Pie Chart", filename=None):
     # Save the plot as an HTML file
     fig.write_html(full_filename)
 
-    fig.show()
+    #fig.show()
 
-def pair_grid_w_p_values(data, filename="pair_grid_with_pvalues.html"):
+def pair_grid_w_p_values_html(data, filename="pair_grid_with_pvalues.html"):
     """
     Create a PairGrid with scatter plots in the upper triangle, histograms in the diagonal,
     and display p-values for Pearson correlation in the lower triangle.

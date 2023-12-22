@@ -190,13 +190,14 @@ def pie_chart(data, labels, title="Pie Chart",startangle = 0,pctdistance=0.85):
     plt.title(title)
     plt.show()
 
-def pair_grid_w_p_values(data):
+def pair_grid_w_p_values(data, filename):
     """
     Create a PairGrid with scatter plots in the upper triangle, histograms in the diagonal,
     and display p-values for Pearson correlation in the lower triangle.
 
     Parameters:
     - data (DataFrame): The DataFrame containing the data for the PairGrid.
+    - filename (str): Name of the file for the plot
     """
     # Create a PairGrid and map p-values
     g = sns.PairGrid(data)
@@ -210,10 +211,12 @@ def pair_grid_w_p_values(data):
 
 
     # Add a title
-    g.fig.suptitle("Pair Plot with P-Values", y=1.02)
+    g.fig.suptitle("Scatter Plot Matrix for Music Features", y=1.02)
 
     # Show the plot
     plt.show()
+    
+    plt.savefig(filename)
 
 def display_pvalue(x, y, **kwargs):
     """
