@@ -37,20 +37,20 @@ Hit musical numbers from the blockbuster movies *‘Dilwale Dulhania Le Jayenge�
 
  - *Emotion Classification of the Plot Summaries of Movies*: We used the plot summaries dataset from the CMU Movie Summary Corpus for extracting the plot summaries of the movies. Subsequently, we used the transformer DistilBERT for affecting an emotion classification cum analysis (e.g., amount of love, anger, sadness, etc. in films) of the plot summaries. The dataset of the plot summaries with their corresponding emotions (gennerated by us) can be found at the following link: [Plot_Summaries_with_Emotions.csv](https://drive.google.com/file/d/1Ohbt96e1_HaSBmpjuo35y2XKK0Ycyxqa/view?usp=share_link). It contains movie plot emotions of 42303 movies in (more than 50% of) the movies metadata dataset.
  - *Emotion Correlation Analysis*:
-       - We checked for any correlations between the emotions (sadness, anger, fear, joy, love and surprise) portrayed by different movies and found out that none of the emotions were strongly correlated with another one. Accordingly, we decided to go ahead with all the 6 emotions for the analysis in the next step.
+    - We checked for any correlations between the emotions (sadness, anger, fear, joy, love and surprise) portrayed by different movies and found out that none of the emotions were strongly correlated with another one. Accordingly, we decided to go ahead with all the 6 emotions for the analysis in the next step.
  - *Analysis of the Emotions and the Relationships between the Time Series of Emotions and Music*:
-       - We zoomed in on the 2 cinematic powerhouses India and the United States of America (USA). Our dataset of movies, music and emotions contained 3381 Indian movies and American movies.
-       - We visualized and analyzed the emotions portrayed by movies across the top 5 genres for both the 2 countries using violin plots.
-       - We conducted a time series analysis of the music features across the years for movies in the top 5 genres for both the 2 countries.
-       - We analyzed the long term relationship (cointegration) between the time series of emotions and music features across the years for the top 5 movie genres for both the 2 countries using the augmented Engle-Granger two-step cointegration test. The null hypothesis is of no cointegration between the 2 time series while the alternative hypothesis is that they are cointegrated, i.e., their linear combination is I(1). We analyzed the interesting findings from these cointegration tests. 
+    - We zoomed in on the 2 cinematic powerhouses India and the United States of America (USA). Our dataset of movies, music and emotions contained 3381 Indian movies and American movies.
+    - We visualized and analyzed the emotions portrayed by movies across the top 5 genres for both the 2 countries using violin plots.
+    - We conducted a time series analysis of the music features across the years for movies in the top 5 genres for both the 2 countries.
+    - We analyzed the long term relationship (cointegration) between the time series of emotions and music features across the years for the top 5 movie genres for both the 2 countries using the augmented Engle-Granger two-step cointegration test. The null hypothesis is of no cointegration between the 2 time series while the alternative hypothesis is that they are cointegrated, i.e., their linear combination is I(1). We analyzed the interesting findings from these cointegration tests. 
 
 **PART 3: How does Music Drive Movies Towards Success**:
  - *Defining Success*: We considered the box office revenue as the indicator of a film’s success.
  - *Analysis of the Impact of Separate Attributes of Music on Movie Success*:
-       - First of all, we compared the box office revenue with different music features to see if there was a correlation between them. This naive analysis allowed us to discern the music features which could act as potential determinants of success.
-       - For all these correlated features, we then decided to experiment with a set of thresholds and formed treatment and control groups according to the quantile of the features at the given thresholds. We then chose the threshold with the greatest difference in the Mean Box Office Revenue between the treatment and control groups, whilst checking that the limits of the confidence interval aren’t negative. With this procedure, we narrowed down the list of correlated features.
-       - We then conducted paired matching to neutralize the effect of confounders and appropriately identify causal links.
-       - We finally formulated general guidelines (our predictions) of how choosing music appropriately can drive a movie towards success.
+    - First of all, we compared the box office revenue with different music features to see if there was a correlation between them. This naive analysis allowed us to discern the music features which could act as potential determinants of success.
+    - For all these correlated features, we then decided to experiment with a set of thresholds and formed treatment and control groups according to the quantile of the features at the given thresholds. We then chose the threshold with the greatest difference in the Mean Box Office Revenue between the treatment and control groups, whilst checking that the limits of the confidence interval aren’t negative. With this procedure, we narrowed down the list of correlated features.
+    - We then conducted paired matching to neutralize the effect of confounders and appropriately identify causal links.
+    - We finally formulated general guidelines (our predictions) of how choosing music appropriately can drive a movie towards success.
 
 
 ## Proposed Timeline:
