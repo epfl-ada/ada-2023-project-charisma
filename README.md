@@ -38,7 +38,7 @@ Hit musical numbers from the blockbuster movies *â€˜Dilwale Dulhania Le Jayengeâ
  - *Emotion Correlation Analysis*:
        - We checked for any correlations between the emotions (sadness, anger, fear, joy, love and surprise) portrayed by different movies and found out that none of the emotions were strongly correlated with another one. Accordingly, we decided to go ahead with all the 6 emotions for the analysis in the next step.
  - *Analysis of the Emotions and the Relationships between the Time Series of Emotions and Music*:
-       - We zoomed in on the 2 cinematic powerhouses where music and movies gel together: India and the United States of America (USA). These nations, which were the top 2 countries in our dataset, served as the focal points for our in-depth emotion and time series analysis. Our dataset of movies, music and emotions contained 3381 Indian movies and American movies
+       - We zoomed in on the 2 cinematic powerhouses India and the United States of America (USA). Our dataset of movies, music and emotions contained 3381 Indian movies and American movies.
        - We visualized and analyzed the emotions portrayed by movies across the top 5 genres for both the 2 countries using violin plots.
        - We conducted a time series analysis of the music features across the years for movies in the top 5 genres for both the 2 countries.
        - We analyzed the long term relationship (cointegration) between the time series of emotions and music features across the years for the top 5 movie genres for both the 2 countries using the augmented Engle-Granger two-step cointegration test. The null hypothesis is of no cointegration between the 2 time series while the alternative hypothesis is that they are cointegrated, i.e., their linear combination is I(1). We analyzed the interesting findings from these cointegration tests. 
@@ -48,8 +48,8 @@ Hit musical numbers from the blockbuster movies *â€˜Dilwale Dulhania Le Jayengeâ
  - *Analysis of the Impact of Separate Attributes of Music on Movie Success*:
        - First of all, we compared the box office revenue with different music features to see if there was a correlation between them. This naive analysis allowed us to discern the music features which could act as potential determinants of success.
        - For all these correlated features, we then decided to experiment with a set of thresholds and formed treatment and control groups according to the quantile of the features at the given thresholds. We then chose the threshold with the greatest difference in the Mean Box Office Revenue between the treatment and control groups, whilst checking that the limits of the confidence interval arenâ€™t negative. With this procedure, we narrowed down the list of correlated features.
-      - We then conducted paired matching to neutralize the effect of confounders and appropriately identify causal links.
-      - We finally formulated general guidelines (our predictions) of how choosing music appropriately can drive a movie towards success.
+       - We then conducted paired matching to neutralize the effect of confounders and appropriately identify causal links.
+       - We finally formulated general guidelines (our predictions) of how choosing music appropriately can drive a movie towards success.
 
 
 ## Proposed Timeline:
